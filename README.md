@@ -1,38 +1,60 @@
-# create-svelte
+# AnimateIt
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Welcome to AnimateIt! This project demonstrates how to animate HTML elements using Svelte actions.
 
-## Creating a project
+## Table of Contents
 
-If you're seeing this, you've probably already done this step. Congrats!
+* [Introduction](#introduction)
+* [Features](#features)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Contributing](#contributing)
+* [License](#license)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Introduction
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+AnimateIt is a Svelte-based project that showcases various animated states of HTML elements. The animations are triggered by different events such as hover and click.
 
-## Developing
+## Features
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+* Animate HTML elements on hover, click, focus and blur events plus error an disabled states.
+* Customizable animations with different types and durations.
+* Easy to integrate and extend.
 
-```bash
+## Installation
+
+To get started with AnimateIt, follow these steps:
+
+
+1. Clone the repository:
+
+   ```sh
+   git clone https://github.com/pigraphic/AnimateIt
+   ```
+2. Navigate to the project directory:
+
+   ```sh
+   cd animateit
+   ```
+3. Install the dependencies:
+
+   ```sh
+   npm install
+   ```
+
+## Usage
+
+To run the project locally, use the following command:
+
+```sh
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
 
-To create a production version of your app:
+## Contributing
 
-```bash
-npm run build
-```
+Contributions are welcome! Please open an issue or submit a pull request if you have any improvements or bug fixes.
 
-You can preview the production build with `npm run preview`.
+## License
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+This project is licensed under the MIT License. See the LICENSE file for details. \n

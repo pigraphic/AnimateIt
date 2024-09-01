@@ -1,25 +1,34 @@
 <script lang="ts">
-  import { animateIt } from "../components/actions/AnimateIt";
+    import { animateIt } from "../components/actions/AnimateIt";
+    import type { ConfigType } from '../components/actions/AnimateIt';
 
-  let submitBtn:HTMLButtonElement;
-  let field01:HTMLInputElement;
-  let field02:HTMLInputElement;
-  let field03:HTMLInputElement;
-  const txt:string[] = [ 'Apply error and disabled', 'Reset' ];
-  let title = $state(txt[0]);
+    const txt:string[] = [ 'Apply error and disabled', 'Reset' ];
+    const animateBtn:ConfigType = {
+        hover:{animation:'highlight',duration:550},
+        click:{animation:'fade',duration:850}
+    };
+    const animatePulse:ConfigType = {
+        click:{animation:'pulse',duration:800, easing: 'ease-in-out'},
+    };
 
-  const setError = (e:Event) => {
+    let submitBtn:HTMLButtonElement;
+    let field01:HTMLInputElement;
+    let field02:HTMLInputElement;
+    let field03:HTMLInputElement;
+    let title = $state(txt[0]);
+
+    const setError = (e:Event) => {
     e.preventDefault();
     if ( field01.classList.contains("error") ) {
-      field01.classList.remove("error");
-      field03.removeAttribute('disabled');
-      title = txt[0];
+        field01.classList.remove("error");
+        field03.removeAttribute('disabled');
+        title = txt[0];
     } else {
-      field01.classList.add("error");
-      field03.setAttribute('disabled', 'true');
-      title = txt[1];
+        field01.classList.add("error");
+        field03.setAttribute('disabled', 'true');
+        title = txt[1];
     }
-  };
+    };
 </script>
 <div class="container">
     <div class="header">
@@ -34,9 +43,8 @@
             <input use:animateIt bind:this={field02} type="text" id="field02" name="field02" />
             <label for="field04">Field 04</label>
             <div style="width:100%">
-                <input use:animateIt={{
-                        click:{animation:'pulse',duration:800, easing: 'ease-in-out'},
-                    }}
+                <input
+                    use:animateIt={animatePulse}
                     type="checkbox"
                     id="field04"
                     name="field04"
@@ -47,10 +55,7 @@
             <button
                 bind:this={submitBtn}
                 onclick={(e:Event) => {setError(e)}}
-                use:animateIt={{
-                    hover:{animation:'highlight',duration:550},
-                    click:{animation:'fade',duration:850}
-                }}
+                use:animateIt={ animateBtn }
                 type="submit"
             >
                 {title}

@@ -1,6 +1,19 @@
+/**
+ * AnimateIt
+ *
+ * A utility function to animate elements based on their state.
+ *
+ * @author Giulio Porta P.I.Graphic
+ * @version 1.0.0
+ * @license MIT
+ *
+ * @param {HTMLElement} node - The element to animate
+ * @param {Object} config - The configuration object
+ * */
+
 type EasingType = 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear';
 
-type ConfigType = {
+export type ConfigType = {
     error?: { animation: string; duration: number; easing?: EasingType; };
     click?: { animation: string; duration: number; easing?: EasingType; };
     focus?: { animation: string; duration: number; easing?: EasingType; };
