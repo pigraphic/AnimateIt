@@ -26,6 +26,7 @@ AnimateIt is a Svelte-based project that showcases various animated states of HT
 To get started with AnimateIt, follow these steps:
 
 
+
 1. Clone the repository:
 
    ```sh
@@ -39,7 +40,7 @@ To get started with AnimateIt, follow these steps:
 3. Install the dependencies:
 
    ```sh
-   npm install
+   pnpm install
    ```
 
 ## Usage
@@ -47,7 +48,7 @@ To get started with AnimateIt, follow these steps:
 To run the project locally, use the following command:
 
 ```sh
-npm run dev
+pnpm run dev
 ```
 
 
